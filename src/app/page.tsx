@@ -35,6 +35,7 @@ export default function Home() {
         <h1 className="text-black-300 text-3xl font-bold mb-2">สวัสดี, {isLoading ? '...' : student ? student.name : '404 Not Found'}
         </h1>
         <h2 className="text-black-300 mb-5 text-xl">รายวิชา 01418472-65 การบูรณาการกระบวนการเชิงอไจล์และเดฟอ็อปส์</h2>
+        <h2 className="text-red-300 mb-5 text-xl">updated</h2>
         <FriendsComponent />
       </div>
     </>
