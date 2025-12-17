@@ -35,4 +35,14 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/472-cicd:latest
           build-args: |
-            NEXT_PUBLIC_STUDENT_ID=6510405482
+            NEXT_PUBLIC_STUDENT_ID=6610402060
+      
+  deploy:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: show kube context
+        run: |
+          kubectl config current-context
+          kubectl get nodes
