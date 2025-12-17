@@ -51,7 +51,6 @@ jobs:
         run: |
           kubectl config current-context
           kubectl get nodes
-          ls -l
       
       - name: Deploy to Kubernetes
         run: |
