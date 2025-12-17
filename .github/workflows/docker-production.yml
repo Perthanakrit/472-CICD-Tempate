@@ -43,6 +43,10 @@ jobs:
     environment: production
     
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
       - name: show kube context
         run: |
           kubectl config current-context
