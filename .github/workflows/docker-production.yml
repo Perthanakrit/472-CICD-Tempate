@@ -34,6 +34,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/472-cicd:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           build-args: |
             NEXT_PUBLIC_STUDENT_ID=6610402060
       
